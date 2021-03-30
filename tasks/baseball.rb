@@ -89,38 +89,6 @@ class StairSweeper < UrRobot
   def baseball
     all_lines
     bases
-  end
-
-  def sommative_03
-    matrice = [0]
-    ii=0
-      12.times do
-        move
-          10.times do
-          if next_to_a_beeper?
-          pick_beeper
-          ii=ii+1
-          end
-      end
-      matrice << ii
-      ii.times do
-      put_beeper
-    end
-    ii=0
-  end
-  puts matrice
-  puts "______________"
-      j=12
-    turn_right
     move
-    turn_right
-      12.times do
-        ii = matrice[j]
-          ii.times do
-            put_beeper
-          end
-          move
-          j=j-1
-      end
   end
 end
